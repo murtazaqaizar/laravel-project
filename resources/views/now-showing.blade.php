@@ -20,6 +20,10 @@
                 <li class="nav-item"><a class="nav-link text-white" href="#location_section">Locations</a></li>
                 <li class="nav-item"><a class="nav-link text-white" href="#contact_sections">Contacts</a></li>
             </ul>
+            <div class="search-container">
+    <input type="text" id="searchInput" placeholder="Search pages..." />
+    <button onclick="navigateToPage()">Go</button>
+</div>
         </div>
     </div>
 </header>>
@@ -49,5 +53,23 @@
 </section>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+function navigateToPage() {
+    const input = document.getElementById('searchInput').value.toLowerCase();
+    const pages = {
+        'home': '/home',
+        'now showing': '/now-showing',
+        'coming soon': '/coming-soon',
+        // Add more keywords and paths as needed
+    };
+
+    if (pages[input]) {
+        window.location.href = pages[input];
+    } else {
+        alert("Page not found. Try 'home', 'now showing', or 'coming soon'.");
+    }
+}
+</script>
 </body>
 </html>

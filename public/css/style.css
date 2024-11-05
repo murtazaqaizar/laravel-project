@@ -203,3 +203,29 @@ body {
     50% { background-image: url("../images/muala jatt.jpg"); }
     100% { background-image: url("../images/black panter.jpg"); }
 }
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+#searchInput {
+    width: 200px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid rgb(240, 29, 29);
+    border-radius: 5px;
+    outline: none;
+    margin-right: 10px;
+}
+
+.search-container button {
+    padding: 10px 20px;
+    background-color: rgb(240, 29, 29);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
